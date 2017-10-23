@@ -6,10 +6,10 @@ userController.post = (req, res) => {
   const { username, password } = req.body;
 
   const user = new db.User({
-    username, 
-    password
+    username
   });
 
+  user.setPassword(password);
   user.save()
     .then(newUser => {
       res.status(200).json({
