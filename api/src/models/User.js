@@ -12,7 +12,9 @@ const userSchema = new Schema({
   passwordHash: {
     type: String,
     required: true
-  }
+  },
+  createdAt: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, default: false }
 });
 
 // write some encryption for password
