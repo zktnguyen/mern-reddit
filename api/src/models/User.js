@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import { genSaltSync, hashSync, compareSync } from 'bcrypt';
+
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
